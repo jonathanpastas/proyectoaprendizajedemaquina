@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="static/images/asistente.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Reconocimiento de Voz
+  </a>
+</nav>
+
+
+<center><h2>{{ titulo }}</h2></center>
+
+
+<div class="container">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Autor</th>
+      <th scope="col">Nombre de la Canción</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>{{ autor }}</td>
+      <td>{{ name }}</td>
+      
+    </tr>
+  </tbody>
+</table>
+
+
+  <div class="form-group purple-border">
+  <label for="exampleFormControlTextarea4"> Resultado de Transcripcion : Google Speech Recognition</label>
+  <textarea class="form-control" id="exampleFormControlTextarea4" rows="5" readonly>{{ transcripcion }}</textarea>
+  </div>
+
+  <br>
+  <div class="form-group purple-border">
+  <label for="exampleFormControlTextarea5"> Resultado de Transcripcion : Web Scrapping</label>
+  <textarea class="form-control" id="exampleFormControlTextarea5" rows="5" readonly>{{ webscra }}</textarea>
+  </div>
+
+  <label> Similitud entre Transcripciones : </label>
+  <p>{{ similitud }} % </p>
+
+  <center><h3> Titulos Recomendados</h3></center>
+  <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Titulo Sugerido</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th scope="row">1</th>
+      <td> {{ t1 }}</td>
+
+    </tr>
+
+  <tr>
+      <th scope="row">2</th>
+      <td> {{ t2 }}</td>
+
+    </tr>
+
+  <tr>
+      <th scope="row">3</th>
+      <td> {{ t3 }}</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+<br>
+<br>
+<center><a class="btn btn-primary" href="/" role="button">Retornar al Inicio</a></center>
+<br>
+<br>
+<br>
+<br>
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-text">
+    Proyecto Correspondiente al Primer Parcial de Aprendizaje de Maquina - Universidad Politécnica Salesiana
+  </span>
+</nav>
+{% endblock %}
