@@ -29,7 +29,7 @@ import scipy.io.wavfile as waves
 
 ###################Reconocimiento de Audio##################################### 
 
-#os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="D:\spechh-07f6cfbd660c.json"
+#os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="archivojsondeclaves"
 #client = speech.SpeechClient()
     
 #file_name='music\sacrifice1.wav'
