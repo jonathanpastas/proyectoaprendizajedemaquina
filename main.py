@@ -28,17 +28,17 @@ def cambiar() -> 'html':
     if cancion == 'sacrifice':
         aut = 'Elton Jhon'
         tit = 'Sacrifice'
-        path = 'D:\DESARROLLO PYTHON_SPYDER\musica\sacrifice1.wav'
+        path = ['pathcancion.wav']
         dir = 'https://www.letras.com/elton-john/20094/'
 
     if cancion == 'listen':
         aut = 'Roxette'
         tit = 'Listen to your health'
-        path = 'D:\DESARROLLO PYTHON_SPYDER\musica\Listenfinal.wav'
+        path = ['pathcancion.wav']
         dir = 'https://www.letras.com/roxette/34460/'
 
     #######################################GOOGLE SPEECH RECOGNITION ###########################################
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "archivojsonclavesdegoogle"
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credencial_de_accesso_gcloud"
     client = speech.SpeechClient()
 
     file_name = path
@@ -59,7 +59,6 @@ def cambiar() -> 'html':
         txtreco = txtreco + (result.alternatives[0].transcript)
 
     print(txtreco)
-    #############################################################################################################
 
     ##########################################Proceso###########################################################
     web = webscrapping(dir)
